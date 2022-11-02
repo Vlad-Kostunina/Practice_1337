@@ -60,7 +60,7 @@ function pushElementToDOM(newContact){
   let divAvatar=document.createElement('div');
   divAvatar.classList.add("avatar");
   let imgAvatar=document.createElement('img');
-  imgAvatar.src='./photo.png';
+  imgAvatar.src='./img/photo.png';
   divAvatar.appendChild(imgAvatar);
   let divInfo=document.createElement('div');
   divInfo.classList.add("info");
