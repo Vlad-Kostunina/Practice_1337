@@ -32,6 +32,7 @@
         <h2>Add Contact</h2>
       </header>
       <section class="infoContact">
+        <div class="closeModal">&times;</div>
         <label for="nameContact">Name</label>
         <input class="form-control" id="nameContact" type="text" name="" value="">
         <label for="phoneContact">Phone</label>
@@ -41,7 +42,9 @@
           <label class="custom-control-label" for="checkFavorites">Favorites</label>
         </div>
         <div class="alert alert-danger uncorrect" role="alert">
-          Некорректные данные проверьте правильность ввода!
+          Проверьте правильность ввода <br>
+          Длина поля Name - макс. 15 символов. <br>
+          В поле Phone должен содержаться телефон.
         </div>
       </section>
       <footer>

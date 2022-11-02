@@ -8,6 +8,10 @@ let uncorrectData=document.querySelector('.uncorrect');
 let checkFavorites=document.querySelector("#checkFavorites");
 let contacts=document.querySelector(".contacts");
 let searchContact=document.querySelector("#search");
+document.querySelector(".closeModal").addEventListener("click",(event)=>{
+  displayContacts.style.display="flex";
+  displayAddContact.style.display="none";
+});
 let newContact="";
 let arrayOfContacts=[];
 let maxFavoriteId;
@@ -35,7 +39,7 @@ addContact.addEventListener("click",()=>{
     id:arrayOfContacts.length,
     favoriteId:checkFavorites.checked?maxFavoriteId:-1
   };
-  if((newContact.name.split()!="")&&(newContact.phone.length==17)){
+  if((newContact.name.split()!=""&&newContact.name.length<15)&&(newContact.phone.length==17)){
   pushElementToDOM(newContact);
   arrayOfContacts.push(newContact);
   updateContacts();
